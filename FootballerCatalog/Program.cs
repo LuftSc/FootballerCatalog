@@ -1,3 +1,6 @@
+using FootballerCatalog.DataAccess;
+using Microsoft.EntityFrameworkCore;
+
 namespace FootballerCatalog
 {
     public class Program
@@ -12,6 +15,11 @@ namespace FootballerCatalog
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddDbContext<FootballerCatalogDbContext>(options =>
+            {
+                options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(FootballerCatalogDbContext)));
+            });
 
             var app = builder.Build();
 

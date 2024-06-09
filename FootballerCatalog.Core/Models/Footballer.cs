@@ -4,7 +4,7 @@
     {
         public static readonly string[] ALLOWED_COUNTRIES = { "Россия", "США", "Италия" };
         private Footballer(Guid id, string firstName, string lastName, string gender, 
-            DateTime birthDate, string team, string country)
+            DateOnly birthDate, string team, string country)
         {
             Id = id;
             FirstName = firstName;
@@ -22,14 +22,14 @@
 
         public string Gender { get; } = string.Empty;
 
-        public DateTime BirthDate { get; }
+        public DateOnly BirthDate { get; }
 
         public string Team { get; } = string.Empty;
 
         public string Country { get; } = string.Empty;
 
-        public static (Footballer footballer, string Error) Create(Guid id, string firstName, 
-            string lastName, string gender,DateTime birthDate, string team, string country)
+        public static (Footballer Footballer, string Error) Create(Guid id, string firstName, 
+            string lastName, string gender, DateOnly birthDate, string team, string country)
         {
             var error = String.Empty;
 

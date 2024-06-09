@@ -11,7 +11,7 @@ namespace FootballerCatalog.DataAccess.Entities
 
         public string Gender { get; set; } = string.Empty;
 
-        public DateTime BirthDate { get; set; }
+        public DateOnly BirthDate { get; set; }
 
         public string Team { get; set; } = string.Empty;
 
