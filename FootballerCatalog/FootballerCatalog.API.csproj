@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FootballerCatalog.Application\FootballerCatalog.Application.csproj" />
     <ProjectReference Include="..\FootballerCatalog.DataAccess\FootballerCatalog.DataAccess.csproj" />
   </ItemGroup>
 

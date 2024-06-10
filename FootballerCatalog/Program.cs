@@ -1,4 +1,6 @@
+using FootballerCatalog.Application.Services;
 using FootballerCatalog.DataAccess;
+using FootballerCatalog.DataAccess.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace FootballerCatalog
@@ -20,6 +22,10 @@ namespace FootballerCatalog
             {
                 options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(FootballerCatalogDbContext)));
             });
+
+            builder.Services.AddScoped<IFootballersService, FootballersService>();
+            builder.Services.AddScoped<IFootballersRepository, FootballersRepository>();
+
 
             var app = builder.Build();
 
