@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  padding-top: 30px;
+  gap: 30px 20px;
+}
+
+.footballer_price {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+}
+
+.footballer_button {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.footballer_modal {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card_title {
+  margin-right: 20px;
+  max-width: 80%;
+  white-space: normal;
+}
+
+.modal_dropDownList_team, .modal_inputField_team {
+  display: flex;
+  flex-direction: row;
+  gap:20px;
+}
+
+.modal_dropDownList_team {
+  position: relative;
+  z-index: 1;
+}
+
+.modal_inputField_team {
+  position: absolute;
+  visibility: hidden;
+  z-index: 2;
+  top: 384px;
+}
+
+#birthDate, #gender,#firstName, #lastName,#team, #country {
+  color: black;
+  margin-bottom: 10px;
+}
+
+#lastName {
+  margin-top: 10px;
+}
+
+.home_element {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 20px;
+}
+
+.home_text {
+  font-size: large;
+}
+
+.card_footballerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card_buttons {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
